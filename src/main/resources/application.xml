@@ -30,5 +30,14 @@
         <property name="configLocation" value="mybatis.xml" />
     </bean>
 
+    <!-- scan all mapper ports, then create mapper proxy objects -->
+    <bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!-- mapper interface packages -->
+        <property name="basePackage" value="com.zx.mapper" />
+        <!-- sql session factory object to initialize sql session, then get mapper interface proxy object -->
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+    </bean>
+    <!-- get affairs -->
+
 
 </beans>
