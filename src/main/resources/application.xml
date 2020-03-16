@@ -39,5 +39,10 @@
     </bean>
     <!-- get affairs -->
 
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+
+    <bean id="roomService" class="com.zx.service.impl.IRoomServiceImpl" autowire="byType"></bean>
 
 </beans>

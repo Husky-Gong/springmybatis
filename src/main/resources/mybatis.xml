@@ -3,5 +3,20 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+    <settings>
+        <setting name="logImpl" value="log4J"/>
+        <setting name="cacheEnabled" value="false"/>
+    </settings>
 
+    <typeAliases>
+        <package name="com.zx.domain"/>
+    </typeAliases>
+
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>
+    </plugins>
+
+    <mappers>
+        <mapper resource="mapper/RoomMapper.xml"/>
+    </mappers>
 </configuration>

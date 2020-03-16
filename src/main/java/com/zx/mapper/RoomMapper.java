@@ -2,6 +2,8 @@ package com.zx.mapper;
 
 import com.zx.domain.Room;
 
+import java.util.List;
+
 public interface RoomMapper {
     int deleteByPrimaryKey(Integer id);
 
@@ -14,4 +16,7 @@ public interface RoomMapper {
     int updateByPrimaryKeySelective(Room record);
 
     int updateByPrimaryKey(Room record);
+
+    List<Room> selectList();
+
 }

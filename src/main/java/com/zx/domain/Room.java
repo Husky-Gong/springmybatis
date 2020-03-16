@@ -50,4 +50,15 @@ public class Room {
     public void setHotelId(Integer hotelId) {
         this.hotelId = hotelId;
     }
+
+    @Override
+    public String toString() {
+        return "Room{" +
+                "id=" + id +
+                ", type=" + type +
+                ", price=" + price +
+                ", info='" + info + '\'' +
+                ", hotelId=" + hotelId +
+                '}';
+    }
 }
